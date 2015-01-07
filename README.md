@@ -1,0 +1,2 @@
+# pinchify
+exercise using ionic
