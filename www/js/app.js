@@ -13,4 +13,34 @@ angular.module('pincher', ['ionic'])
     }
 
   });
+
+})
+
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+  .state('tab', {
+    url: "/tab",
+    abstract: true,
+    templateUrl: "templates/tabs.html"
+  })
+  .state('tab.home', {
+    url: "/home",
+    views: {
+      'home': {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
+      }
+    }
+  })
+  .state('tab.results', {
+    url: "/results",
+    views: {
+      'results': {
+        templateUrl: 'templates/results.html',
+        controller: 'ResultsCtrl'
+      }
+    }
+  })
+
+  $urlRouterProvider.otherwise('/tab/home');
 })
