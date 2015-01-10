@@ -8,12 +8,13 @@ angular.module('pinch.controllers', [])
 		})
 })
 
-.controller('HomeCtrl', function($scope, $http) {
+.controller('HomeCtrl', function($scope, $http, $state) {
 
 	$scope.pinchInput = {};
 
 	$scope.pinchSubmit = function() {
 		$http.put('http://m.pinchfavor.com:9999/api/pinch', $scope.pinchInput)
+		$state.go('tab.results');
 	}
 });
 
