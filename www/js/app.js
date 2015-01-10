@@ -1,5 +1,5 @@
 
-angular.module('pincher', ['ionic'])
+angular.module('pinch', ['ionic', 'pinch.controllers', 'pinch.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -27,8 +27,7 @@ angular.module('pincher', ['ionic'])
     url: "/home",
     views: {
       'home': {
-        templateUrl: 'templates/home.html',
-        controller: 'HomeCtrl'
+        templateUrl: 'templates/home.html'
       }
     }
   })
