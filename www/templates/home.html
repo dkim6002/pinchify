@@ -1,15 +1,17 @@
-
-
 <ion-view view-title="Home">
 	<ion-content class="padding">
-		<label class="item item-input" id="pinch-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Enter a pinch">
-      </label>
+		<form ng-submit="pinchSubmit()">
+			<label class="item item-input" id="pinch-input">
+	        <i class="icon ion-search placeholder-icon"></i>
+	        <input type="text" placeholder="Enter a pinch" ng-model="pinchInput.message">
+	      </label>
 
-      <button class="button button-assertive">
-        Submit
-      </button>
-
+	      <button class="button button-full button-positive" ngClick="Submit">
+	        Submit
+	      </button>
+		</form>
+		<pre>
+		{{pinchInput}}
+		</pre>
 	</ion-content>
 </ion-view>
